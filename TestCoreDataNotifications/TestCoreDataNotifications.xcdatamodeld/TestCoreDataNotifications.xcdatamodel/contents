@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Coffee" representedClassName="Coffee" syncable="YES" codeGenerationType="class">
+        <attribute name="milk" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="origin" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Tea" representedClassName="Tea" syncable="YES" codeGenerationType="class">
+        <attribute name="blend" optional="YES" attributeType="String"/>
+        <attribute name="sugar" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Coffee" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Tea" positionX="-54" positionY="18" width="128" height="73"/>
+    </elements>
+</model>
