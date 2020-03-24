@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             coffee.origin = ["Colombia", "Peru", "Kenya", "PNG"].randomElement()!
             coffee.size = 2
             try! bgContext.save()
-            print("Created \(coffee.origin!)")
+            print("Created \(coffee.origin!)!")
         }
     }
     
@@ -32,7 +32,22 @@ class ViewController: UIViewController {
             tea.sugar = true
             tea.blend = ["Darjeeling", "Earl Grey", "Rooibos"].randomElement()!
             try! bgContext.save()
-            print("Created \(tea.blend!)")
+            print("Created \(tea.blend!)!")
+        }
+    }
+    
+    @IBAction func didTapChangeTea(_ sender: Any) {
+        let bgContext = persistentContainer.newBackgroundContext()
+        bgContext.perform {
+            let fetchRequest: NSFetchRequest<Tea> = NSFetchRequest(entityName: "Tea")
+            fetchRequest.predicate = NSPredicate(format: "blend = %@", "Rooibos")
+            let teas = try! bgContext.fetch(fetchRequest)
+            print("found \(teas.count)")
+            for tea in teas {
+                tea.sugar.toggle()
+                print("Updated \(tea.blend!)!")
+            }
+            try! bgContext.save()
         }
     }
     

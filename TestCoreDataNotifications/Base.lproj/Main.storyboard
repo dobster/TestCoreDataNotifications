@@ -68,6 +68,16 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
+                            <barButtonItem style="plain" id="eV2-Ih-YAO">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dG3-uD-8do">
+                                    <rect key="frame" x="132" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="FlipMilk"/>
+                                    <connections>
+                                        <action selector="didTapChangeTea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBC-Cb-7MM"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
