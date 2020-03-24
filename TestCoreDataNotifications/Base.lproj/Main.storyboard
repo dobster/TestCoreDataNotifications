@@ -78,6 +78,16 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
+                            <barButtonItem style="plain" id="ohE-tT-jHi">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zkw-RV-9mX">
+                                    <rect key="frame" x="32" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="FlipCoffee"/>
+                                    <connections>
+                                        <action selector="didTapChangeCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeP-ll-usm"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

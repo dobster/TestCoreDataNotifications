@@ -51,6 +51,21 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapChangeCoffee(_ sender: Any) {
+        let bgContext = persistentContainer.newBackgroundContext()
+        bgContext.perform {
+            let fetchRequest: NSFetchRequest<Coffee> = NSFetchRequest(entityName: "Coffee")
+            fetchRequest.predicate = NSPredicate(format: "origin = %@", "Peru")
+            let coffees = try! bgContext.fetch(fetchRequest)
+            print("found \(coffees.count)")
+            for coffee in coffees {
+                coffee.milk.toggle()
+                print("Updated \(coffee.origin!)!")
+            }
+            try! bgContext.save()
+        }
+    }
+    
     var fetchedResultsController: NSFetchedResultsController<Coffee>!
     var observer: NSObjectProtocol?
     
